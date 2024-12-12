@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --background-black: #000000;
+    --text-white: #ffffff;
+    --primary-red: #c8102e;
+    --secondary-red: #8b0f21;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-black);
+    color: var(--text-white);
+}
+
+/* Header Styling */
+header {
+    background: var(--primary-red);
+    padding: 10px 0;
+}
+
+.warrior-logo img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
+
+/* Navigation Bar */
+.navbar {
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Makes navigation responsive */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-white);
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-links a:hover {
+    color: var(--primary-red);
+}
+
+.nav-links a:focus {
+    outline: 2px dashed var(--text-white); /* Accessibility focus style */
+}
+
+/* Link Classes */
+.link-primary {
+    color: rgb(0, 123, 255); /* Blue */
+}
+
+.link-secondary {
+    color: rgb(108, 117, 125); /* Gray */
+}
+
+.link-success {
+    color: rgb(40, 167, 69); /* Green */
+}
+
+.link-info {
+    color: rgb(23, 162, 184); /* Cyan */
+}
+
+.link-warning {
+    color: rgb(255, 193, 7); /* Yellow */
+}
+
+.link-danger {
+    color: rgb(220, 53, 69); /* Red */
+}
+
+.link-light {
+    color: rgb(248, 249, 250); /* Light Gray */
+}
+
+.link-dark {
+    color: rgb(52, 58, 64); /* Dark Gray */
+}
+
+/* Footer */
+footer {
+    background: var(--background-black);
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+footer .social-media img {
+    width: 30px;
+    transition: transform 0.3s ease; /* Smooth hover zoom */
+}
+
+footer .social-media img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Buttons and Active Elements */
+.page-link.active {
+    background-color: var(--primary-red);
+    border-color: var(--secondary-red); /* Adds contrast */
+}
+
+.list-group-item.active {
+    background-color: var(--primary-red);
+    border-color: var(--secondary-red);
+}
+
+.btn-check + .btn:hover {
+    background-color: var(--primary-red);
+    border-color: var(--secondary-red);
+}
+
+/* Forms */
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-red);
+    border-radius: 5px;
+}
+
+form button {
+    background-color: var(--primary-red);
+    color: var(--text-white);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--secondary-red);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stacks navigation links vertically */
+        gap: 10px;
+    }
+
+    .warrior-logo img {
+        width: 100px; /* Smaller logo for smaller screens */
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
